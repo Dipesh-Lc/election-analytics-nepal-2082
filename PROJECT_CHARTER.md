@@ -1,4 +1,4 @@
-#1. Background & Context
+# 1. Background & Context
 
 Nepal’s 2082 general election is being conducted earlier than its scheduled cycle following the collapse of the previous government. The collapse was triggered by the gen-Z protests against corruption, political stagnation, and perceived elite capture of the political system.
 
@@ -7,7 +7,7 @@ The protests marked a significant departure from routine political dissent, resu
 This election therefore represents a potential case of generational political realignment rather than a routine electoral contest.
 
 
-#2. Project Objectives
+# 2. Project Objectives
 
 Objective A — Proportional Representation (PR)
 
@@ -18,9 +18,9 @@ Objective B — Direct Constituency Seats
 To estimate the probability of victory for parties and candidates in each of the 165 directly elected constituencies, accounting for historical voting patterns, demographic context, candidate characteristics, and national political momentum.
 
 
-#3. Scope Definition (What This Project Covers)
+# 3. Scope Definition (What This Project Covers)
 
-##In Scope
+## In Scope
 
 Historical election data (2074, 2079)
 
@@ -35,7 +35,7 @@ Aggregate social media sentiment and narratives
 District- and constituency-level analysis
 
 
-##Out of Scope
+## Out of Scope
 
 Individual voter behavior
 
@@ -48,7 +48,7 @@ Targeted political messaging
 Causal claims about protest participation and voting
 
 
-#4. Modeling Framework Overview
+# 4. Modeling Framework Overview
 
 Nepal’s mixed electoral system requires two distinct analytical approaches. Proportional representation outcomes depend on national vote share, while constituency outcomes depend on localized competition and candidate-specific effects.
 
@@ -59,9 +59,9 @@ A district-based vote share model for proportional representation
 A constituency-level candidate-aware classification model for direct seats
 
 
-#5. Units of Analysis & Prediction Targets
+# 5. Units of Analysis & Prediction Targets
    
-##Proportional Representation Model
+## Proportional Representation Model
 
 Unit: District × Election Year
 
@@ -70,7 +70,7 @@ Target: Party vote share (%)
 Output: Aggregated national vote share and simulated PR seat allocation
 
 
-##Constituency Model
+## Constituency Model
 
 Unit: Candidate × Constituency
 
@@ -79,7 +79,7 @@ Target: Probability of winning a seat
 Output: Win probabilities and electoral volatility indicators
 
 
-#6. Data Inventory
+# 6. Data Inventory
 
 | Dataset          | Level                   | Years      | Purpose                    |
 | ---------------- | ----------------------- | ---------- | -------------------------- |
@@ -90,7 +90,7 @@ Output: Win probabilities and electoral volatility indicators
 | Social Media     | National / District     | 2081–2082  | Sentiment & narratives     |
 
 
-#7. Assumptions & Limitations
+# 7. Assumptions & Limitations
 District boundaries are assumed to be consistent across datasets unless explicitly adjusted
 
 Social media users are not representative of the electorate
@@ -102,7 +102,7 @@ Candidate data may be incomplete or uneven across constituencies
 Models are probabilistic and exploratory, not predictive guarantees
 
 
-#8. Ethical Considerations
+# 8. Ethical Considerations
 This project is intended for analytical and educational purposes only. It does not aim to influence voter behavior or support political campaigning.
 
 The use of social media data is restricted to aggregate-level analysis, and no individual-level targeting or profiling is performed.
@@ -110,7 +110,7 @@ The use of social media data is restricted to aggregate-level analysis, and no i
 Given the violent nature of recent protests, care is taken to avoid sensationalism, normative judgment, or amplification of extremist narratives.
 
 
-#9. Expected Outputs
+# 9. Expected Outputs
 
 District-level PR vote share forecasts
 
