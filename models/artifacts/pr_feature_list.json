@@ -1,0 +1,19 @@
+[
+  "vote_share_lag",
+  "is_new_party",
+  "IS_Major?",
+  "Was_Part_Of_Ousted_Government?",
+  "GenZ_and_Youth_Favored?",
+  "IS_ALTERNATIVE_FORCE?",
+  "under_40_ratio",
+  "40-60_ratio",
+  "female_ratio",
+  "Literacy Rate 2078",
+  "SEE-Inter",
+  "Grad+",
+  "Absent rate within country 2078",
+  "Absent rate abroad 2078",
+  "valid_turnout",
+  "valid_turnout_lag",
+  "leader_following_log"
+]
