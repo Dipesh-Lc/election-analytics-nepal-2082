@@ -13,7 +13,7 @@ def add_derived_features(df: pd.DataFrame) -> pd.DataFrame:
     df["SEE-Inter"] = df["SLC or SEE % 2078"] + df["Intermediate & equivalent % 2078"]
     df["Grad+"] = df["Graduate & equivalent % 2078"] + df["Post graduate equivalent & above % 2078"]
 
-    # Safe logs (in case you rebuild later without them)
+    # Safe logs
     if "facebook_log" not in df.columns and "Facebook_Presence (In Thousands)" in df.columns:
         df["facebook_log"] = np.log1p(df["Facebook_Presence (In Thousands)"].clip(lower=0))
     if "leader_following_log" not in df.columns and "Top_leader_fb (in Thousands)" in df.columns:

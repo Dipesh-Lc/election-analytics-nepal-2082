@@ -1,7 +1,7 @@
 from __future__ import annotations
 import pandas as pd
 
-def allocate_pr_seats_sainte_lague_from_share(
+def allocate_pr_seats(
     national_df: pd.DataFrame,
     seats: int = 110,
     threshold_pct: float = 3.0,

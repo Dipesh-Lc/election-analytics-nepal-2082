@@ -82,9 +82,9 @@ def run_district_holdout_backtest(
 
     gkf = GroupKFold(n_splits=inner_splits)
 
-    # -----------------
+    
     # Core: Ridge
-    # -----------------
+    
     ridge_pipe = Pipeline([
         ("scaler", StandardScaler()),
         ("model", Ridge(random_state=random_state)),
@@ -108,9 +108,9 @@ def run_district_holdout_backtest(
         best_params=ridge_gs.best_params_
     )
 
-    # -----------------
+    
     # Challenger: ElasticNet
-    # -----------------
+    
     enet_pipe = Pipeline([
         ("scaler", StandardScaler()),
         ("model", ElasticNet(max_iter=20_000, random_state=random_state)),
@@ -137,9 +137,9 @@ def run_district_holdout_backtest(
         best_params=enet_gs.best_params_
     )
 
-    # -----------------
+    
     # Challenger: Shallow XGBoost (optional)
-    # -----------------
+    
     xgb_res = None
     xgb_best = None
     if xgb is not None:
@@ -168,7 +168,7 @@ def run_district_holdout_backtest(
         }
 
         # Manual inner CV (because GridSearchCV doesn't pass groups to XGB well across versions)
-        # We'll do a small randomized-like search by iterating combinations.
+        # I will do a small randomized-like search by iterating combinations.
         best_mae = float("inf")
         best_params = None
         best_model = None

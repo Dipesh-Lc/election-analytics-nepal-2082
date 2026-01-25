@@ -27,7 +27,7 @@ def main():
         encoding="utf-8"
     )
 
-    # Save the trained-on-training-split model (useful for inspection)
+    # Save the trained-on-training-split model
     PATHS.artifacts.mkdir(parents=True, exist_ok=True)
     joblib.dump(best_model, PATHS.artifacts / f"pr_winner_model_{winner_name}_trained_on_split.joblib")
 
