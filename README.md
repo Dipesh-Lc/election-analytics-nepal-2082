@@ -54,25 +54,45 @@ These scenarios are configurable and intentionally bounded.
 
 ## Repository Structure
 election-analytics-nepal-2082/
+
 │
+
 ├── config/ # Scenario and consolidation parameters
+
 │
+
 ├── data/
+
 │ ├── raw/ # Source datasets
+
 │ ├── processed/ # Cleaned modeling tables
+
 │ ├── outputs/ # Predictions, seats, metrics, figures
+
 │
+
 ├── src/
+
 │ ├── models/pr/ # PR model training, backtesting, prediction
+
 │ ├── pr/ # Aggregation and PR seat allocation logic
+
 │ ├── features/ # Feature transforms
+
 │ └── utils/ # IO and validation helpers
+
 │
+
 ├── scripts/ # Reproducible execution scripts
+
 │
+
 ├── notebooks/ # Analysis & visualization notebooks
+
 │
+
 ├── README.md
+
 └── PROJECT_CHARTER.md
 
 ---
