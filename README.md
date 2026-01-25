@@ -53,7 +53,7 @@ These scenarios are configurable and intentionally bounded.
 ---
 
 ## Repository Structure
-
+```
 election-analytics-nepal-2082/
 ├── config/                     # Scenario and consolidation parameters
 │
@@ -74,7 +74,7 @@ election-analytics-nepal-2082/
 │
 ├── README.md
 └── PROJECT_CHARTER.md
-
+```
 ---
 
 ## How to Run (End-to-End)
