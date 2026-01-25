@@ -1,0 +1,40 @@
+{
+  "top_k": 15,
+  "c": 0.75,
+
+  "alpha": 0.25,
+  "alpha_shock": 1,
+
+  "w_eng": 0.6,
+  "w_video": 0.4,
+
+  "beta_pos": 0.3,
+  "beta_neg": 0.6,
+
+  "pos_reactions": ["avg_react_Love", "avg_react_Care"],
+  "neg_reactions": ["avg_react_Angry", "avg_react_Sad"],
+
+  "shock": {
+    "enabled": true,
+    "require_new_party": false,
+    "new_party_source": "pred",
+    "new_party_col": "is_new_party",
+    "z_social_threshold": 1.5,
+    "manual_party_ids": []
+  },
+
+  "input_predictions": "data/outputs/pr_predictions_national_2082.csv",
+  "input_social": "data/processed/sentiment_party_national_2082.csv",
+
+  "out_baseline": "data/outputs/pr_national_baseline.csv",
+  "out_struct": "data/outputs/pr_national_consolidated_structure.csv",
+  "out_social": "data/outputs/pr_national_consolidated_social_tilt.csv",
+  "out_social_shock": "data/outputs/pr_national_consolidated_social_tilt_shock.csv",
+
+  "out_compare": "data/outputs/pr_national_compare_baseline_vs_A_vs_B_vs_Bshock.csv",
+
+  "out_seats_baseline": "data/outputs/pr_seats_baseline.csv",
+  "out_seats_struct": "data/outputs/pr_seats_consolidated_structure.csv",
+  "out_seats_social": "data/outputs/pr_seats_consolidated_social_tilt.csv",
+  "out_seats_social_shock": "data/outputs/pr_seats_consolidated_social_tilt_shock.csv"
+}
