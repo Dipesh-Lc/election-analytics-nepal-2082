@@ -47,7 +47,7 @@ def main():
     shock_cfg = cfg.get("shock", {})
     shock_enabled = bool(shock_cfg.get("enabled", False))
     require_new_party = bool(shock_cfg.get("require_new_party", False))
-    new_party_source = shock_cfg.get("new_party_source", "pred")  # "pred" or "social"
+    new_party_source = shock_cfg.get("new_party_source", "pred")  
     new_party_col = shock_cfg.get("new_party_col", "is_new_party")
     z_thr = float(shock_cfg.get("z_social_threshold", 1.5))
     manual_ids = set(shock_cfg.get("manual_party_ids", []) or [])

@@ -138,7 +138,7 @@ def run_district_holdout_backtest(
     )
 
     
-    # Challenger: Shallow XGBoost (optional)
+    # Challenger: Shallow XGBoost
     
     xgb_res = None
     xgb_best = None

@@ -21,7 +21,7 @@ def main():
     PATHS.artifacts.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, PATHS.artifacts / "pr_final_model.joblib")
 
-    # Save feature list for transparency
+    # Save feature list 
     from src.config.constants import BASE_FEATURES
     (PATHS.artifacts / "pr_feature_list.json").write_text(
         json.dumps(BASE_FEATURES, indent=2),

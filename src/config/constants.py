@@ -2,14 +2,13 @@ from __future__ import annotations
 
 # --- PR settings ---
 PR_SEATS = 110
-PR_THRESHOLD = 3.0  # set later (e.g., 3.0) if you apply a national threshold %
+PR_THRESHOLD = 3.0  
 
 # --- Model columns ---
 TARGET_COL = "vote_share_change"
 LAG_COL = "vote_share_lag"
 GROUP_COL = "district_id"
 
-# Keep features in one place to avoid duplication across notebooks/scripts.
 BASE_FEATURES = [
     # Political inertia
     "vote_share_lag",

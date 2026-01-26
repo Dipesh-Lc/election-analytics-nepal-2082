@@ -25,7 +25,6 @@ def allocate_pr_seats(
     if share_col not in df.columns:
         raise ValueError(f"national_df must contain '{share_col}'")
 
-    # Make sure it's numeric (prevents string comparison issues)
     df[share_col] = pd.to_numeric(df[share_col], errors="coerce")
     if df[share_col].isna().any():
         bad = df[df[share_col].isna()][["party_id", share_col]].head(20)
@@ -38,7 +37,7 @@ def allocate_pr_seats(
     if eligible.empty:
         raise ValueError(f"No parties meet the {threshold_pct}% threshold.")
 
-    # Renormalize eligible shares to sum to 100 (for reporting; scale doesn't affect Sainte-Laguë)
+    # Renormalize eligible shares to sum to 100 
     eligible_total = float(eligible[share_col].sum())
     eligible["eligible_share_norm"] = eligible[share_col] / eligible_total * 100.0
 
@@ -62,11 +61,9 @@ def allocate_pr_seats(
         .reset_index(name="seats")
     )
 
-    # Merge seats into eligible and ensure seats column exists
     eligible = eligible.merge(seat_counts, on="party_id", how="left")
     eligible["seats"] = eligible["seats"].fillna(0).astype(int)
 
-    # Build final output: start from df, set defaults, then overwrite eligible rows
     out = df.copy()
     out["eligible_share_norm"] = 0.0
     out["seats"] = 0
@@ -78,7 +75,6 @@ def allocate_pr_seats(
         suffixes=("", "_elig")
     )
 
-    # If merge created *_elig columns, use them; else use the base ones
     if "eligible_share_norm_elig" in out.columns:
         out["eligible_share_norm"] = out["eligible_share_norm_elig"].fillna(0.0)
         out = out.drop(columns=["eligible_share_norm_elig"])
