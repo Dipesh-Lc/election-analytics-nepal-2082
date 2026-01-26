@@ -2,7 +2,7 @@ from __future__ import annotations
 
 # --- PR settings ---
 PR_SEATS = 110
-PR_THRESHOLD = 0.0  # set later (e.g., 3.0) if you apply a national threshold %
+PR_THRESHOLD = 3.0  # set later (e.g., 3.0) if you apply a national threshold %
 
 # --- Model columns ---
 TARGET_COL = "vote_share_change"
