@@ -18,14 +18,18 @@ TRAIN_RENAME = {
     "cand_vote_share_prev_74": "cand_vote_share_prev",
     "cand_rank_prev_74": "cand_rank_prev",
     "cand_won_prev_74": "cand_won_prev",
+    "missing_cand_vote_share_prev_74": "missing_cand_vote_share_prev",
 
     # party lag
     "party_vote_share_prev_74": "party_vote_share_prev",
     "party_rank_prev_74": "party_rank_prev",
     "party_won_prev_74": "party_won_prev",
-    "party_contested_prev_74": "party_contested_prev",   
+    "party_contested_prev_74": "party_contested_prev",
+
+    # PR priors   
     "pr_share_district_74": "pr_vote_share_prev",
     "pr_rank_district_74": "pr_rank_prev",
+    "missing_pr_share_district_74": "missing_pr_vote_share_prev",
 
     # seat context lag
     "enp_prev_74": "enp_prev",
@@ -40,14 +44,19 @@ INFER_RENAME = {
     "cand_vote_share_prev_79": "cand_vote_share_prev",
     "cand_rank_prev_79": "cand_rank_prev",
     "cand_won_prev_79": "cand_won_prev",
+    "missing_cand_vote_share_prev_79": "missing_cand_vote_share_prev",
+    
 
     # party lag
     "party_vote_share_prev_79": "party_vote_share_prev",
     "party_rank_prev_79": "party_rank_prev",
     "party_won_prev_79": "party_won_prev",
     "party_contested_prev_79": "party_contested_prev",
+    
+    # PR priors
     "pr_share_seat_79": "pr_vote_share_prev",
     "pr_rank_seat_79": "pr_rank_prev",
+    "missing_pr_share_seat_79": "missing_pr_vote_share_prev",
 
     # seat context lag
     "enp_prev_79": "enp_prev",
@@ -77,6 +86,7 @@ BASE_FEATURES = [
     "cand_vote_share_prev",
     "cand_rank_prev",
     "cand_won_prev",
+    "missing_cand_vote_share_prev",
 
     # party lag
     "party_vote_share_prev",
@@ -85,6 +95,7 @@ BASE_FEATURES = [
     "party_contested_prev",
     "pr_vote_share_prev",
     "pr_rank_prev",
+    "missing_pr_vote_share_prev",
 
     # seat context lag
     "enp_prev",
